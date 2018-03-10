@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="RadiationJIE">
 <meta property="og:description" content="经过这几天的捯饬，博客终于算是成形了。这个hexo + github博客项目入门其实并不是很难，因为没有后台，而且有很多好看的模板，只需要一些简单的配置即可。但是细节知识以及原理其实还不懂，不过好在有了这个属于自己博客，以后就可以把自己的一些学习笔记、心得体会放在上面了。万事开头难，好在这个头已经开了，接下来要趁年轻，更加努力地去实现自己的梦想啊！ 　　下面是搭建这个博客的一个简单手册，放在这">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-10T08:19:12.433Z">
+<meta property="og:updated_time" content="2018-03-10T08:36:13.185Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World！">
 <meta name="twitter:description" content="经过这几天的捯饬，博客终于算是成形了。这个hexo + github博客项目入门其实并不是很难，因为没有后台，而且有很多好看的模板，只需要一些简单的配置即可。但是细节知识以及原理其实还不懂，不过好在有了这个属于自己博客，以后就可以把自己的一些学习笔记、心得体会放在上面了。万事开头难，好在这个头已经开了，接下来要趁年轻，更加努力地去实现自己的梦想啊！ 　　下面是搭建这个博客的一个简单手册，放在这">
@@ -364,7 +364,8 @@
     在git bash 中输入命令：
     ssh-keygen -t rsa -C &quot;826922042@qq.com&quot;
     回车直至结束，找到id_rsa.pub路径，复制id_rsa.pub中的内容
-4.在github的Settings-SSH and GPG keys中New SSH key，起个title名，key中填入复制内容后Add SSH key
+4.在github的Settings-SSH and GPG keys中New SSH key，起个title名，key中填入复制内容后
+Add SSH key
 5.验证SSH key是否添加成功，输入命令：
     ssh -T git@github.com
     输入yes
@@ -377,7 +378,8 @@ deploy:
     hexo clean
     hexo generate
     hexo server
-    执行后可在浏览器中输入http://localhost:4000进行验证；在命令行中ctrl+C退出（这时就无法访问http://localhost:4000了）
+    执行后可在浏览器中输入http://localhost:4000进行验证；在命令行中ctrl+C退出（这时就无法
+    访问http://localhost:4000了）
 3.hexo 3.0把服务器独立成个别模块，需单独安装，输入命令：
     npm i hexo-server
     耐心等待即可
@@ -389,7 +391,8 @@ deploy:
     hexo deploy
     deploy过程中需要输入你的username和password
 在浏览器中输入http://yourgithubname.github.io即可看到你的个人博客。        
-</code></pre><h1 id="主题配置及修改"><a href="#主题配置及修改" class="headerlink" title="主题配置及修改"></a>主题配置及修改</h1><pre><code>将主题从github中下载下来放入hexo的themes中，在_config.yml中修改theme为下载的主题文件夹名称。
+</code></pre><h1 id="主题配置及修改"><a href="#主题配置及修改" class="headerlink" title="主题配置及修改"></a>主题配置及修改</h1><pre><code>将主题从github中下载下来放入hexo的themes中，在_config.yml中修改theme为下载的主题文件夹名
+称。
 重新部署：
     hexo clean
     hexo generate

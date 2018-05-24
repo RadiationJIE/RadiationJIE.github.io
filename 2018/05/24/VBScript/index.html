@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon-16x16-next.png?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="VBScript," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="�ս���˾���Ƕ�ʱ�䣬������VBScriptдһЩ�ļ�����ű�����˵����ű���������Ѳ������У�������windows����ϵͳ�ϴ���һЩ�ļ����Ǻܷ���ġ����Խ�֮ǰ���õ��Ĵ�����֪ʶ����������һ���ܽᡣ option explicitǿ��Ҫ����ʽ�����ű��е����б����������ͼʹ��δ��">
+<meta name="keywords" content="VBScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VBScript�ܽ�">
+<meta property="og:url" content="http://yoursite.com/2018/05/24/VBScript/index.html">
+<meta property="og:site_name" content="RadiationJIE">
+<meta property="og:description" content="�ս���˾���Ƕ�ʱ�䣬������VBScriptдһЩ�ļ�����ű�����˵����ű���������Ѳ������У�������windows����ϵͳ�ϴ���һЩ�ļ����Ǻܷ���ġ����Խ�֮ǰ���õ��Ĵ�����֪ʶ����������һ���ܽᡣ option explicitǿ��Ҫ����ʽ�����ű��е����б����������ͼʹ��δ��">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-05-24T08:22:24.083Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VBScript�ܽ�">
+<meta name="twitter:description" content="�ս���˾���Ƕ�ʱ�䣬������VBScriptдһЩ�ļ�����ű�����˵����ű���������Ѳ������У�������windows����ϵͳ�ϴ���һЩ�ļ����Ǻܷ���ġ����Խ�֮ǰ���õ��Ĵ�����֪ʶ����������һ���ܽᡣ option explicitǿ��Ҫ����ʽ�����ű��е����б����������ͼʹ��δ��">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/05/24/VBScript/"/>
+
+
+
+
+
+  <title>VBScript�ܽ� | RadiationJIE</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">RadiationJIE</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/VBScript/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wang Jie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RadiationJIE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">VBScript�ܽ�</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T16:22:24+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/����/" itemprop="url" rel="index">
+                    <span itemprop="name">����</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <pre><code>�ս���˾���Ƕ�ʱ�䣬������VBScriptдһЩ�ļ�����ű�����˵����ű���������Ѳ������У�������windows����ϵͳ�ϴ���һЩ�ļ����Ǻܷ���ġ����Խ�֮ǰ���õ��Ĵ�����֪ʶ����������һ���ܽᡣ
+</code></pre><h1 id="option-explicit"><a href="#option-explicit" class="headerlink" title="option explicit"></a>option explicit</h1><p>ǿ��Ҫ����ʽ�����ű��е����б����������ͼʹ��δ�������ı������������ִ������ʹ��option explicit��������������ڽű����κ��������֮ǰ��</p>
+<h1 id="����L¼"><a href="#����L¼" class="headerlink" title="����Ŀ¼"></a>����Ŀ¼</h1><p>Dim WshShell, WORKINGPATH, RESULTPATH, CONFIGPATH<br>Set WshShell = WScript.CreateObject(“WScript.Shell”)<br>‘˫��.vbs�ű��õ���WshShell.CurrentDirectory·���ǵ�ǰ�ű���·������ѡ��򿪷�ʽMicrosoft Windows Based Script Host�����ǵ�ǰ�ű���·��<br>WORKINGPATH = WshShell.CurrentDirectory &amp; “\data... “<br>RESULTPATH = WshShell.CurrentDirectory &amp; “\result...”<br>CONFIGPATH = WshShell.CurrentDirectory &amp; “\config...”</p>
+<h1 id="��-�ر�excel"><a href="#��-�ر�excel" class="headerlink" title="��/�ر�excel"></a>��/�ر�excel</h1><p>Dim xlApp, xlBook, xlSheet<br>Set xlApp = CreateObject(“Excel.Application”)<br>xlApp.Visible = True                                                    ‘���ɱ����������ʾ����<br>Set xlBook = xlApp.WorkBooks.Open(WORKINGPATH)<br>Set xlSheet = xlBook.Sheets(“��”)                            ‘Sheet����<br>Set xlSheet = xlBook.Sheets(1)                                ‘��һ��Sheet<br>����<br>xlSheet.cells(A”)1, “ = ��<br>‘xlSheet.cells(1, 1) = ��            ‘�������к�Ҳ�����������<br>����<br>‘��ĳһ����ĵ�Ԫ�����ӱ߿򣬱���row��ʾ��<br>xlSheet.Range(“A3:K” &amp; row).Borders(1).LineStyle = 1<br>xlSheet.Range(“A3:K” &amp; row).Borders(2).LineStyle = 1<br>xlSheet.Range(“A3:K” &amp; row).Borders(3).LineStyle = 1<br>xlSheet.Range(“A3:K” &amp; row).Borders(4).LineStyle = 1<br>����<br>‘xlBook.SaveAs (RESULTPATH)        ‘���Ϊexcel�ļ�<br>xlApp.Workbooks.Close<br>xlApp.Quit<br>Set xlBook = Nothing<br>Set xlApp = Nothing</p>
+<h1 id="DateDiff����"><a href="#DateDiff����" class="headerlink" title="DateDiff����"></a>DateDiff����</h1><p>DateDiff(��d�� ,date1,date2)<br>DateDiff�����ɷ�����������֮���ʱ��������<br>DateDiff�������ڼ���������ʱ��Ĳ�ֵ�����㷽���� date2 - date1��<br>��Ƚ���ݣ��򲻹��·����µ���ֵ����Ƚ��·ݣ��򲻹��������µ���ֵ…… �Դ����ơ�</p>
+<h1 id="forѭ��"><a href="#forѭ��" class="headerlink" title="forѭ��"></a>forѭ��</h1><p>for i = 0 to j<br>����<br>Next</p>
+<h1 id="�����"><a href="#�����" class="headerlink" title="�����"></a>�����</h1><p>�� = InputBox(“��������”,”�������”)</p>
+<h1 id="�����l�"><a href="#�����l�" class="headerlink" title="�����ļ�"></a>�����ļ�</h1><p>Set fso = CreateObject(“Scripting.FileSystemObject”)<br>fso.CopyFile ·��A*.doc, ·��B\, false<br>Set fso = Nothing<br>ֻ����·��A��·�����һ����ɲ��֣�ʹ��ͨ���*��false��ʾ�����������ļ���true��ʾ�����ļ�����������false����true����·��BΪֻ�����ԣ�CopyFile�����޷���ɡ�</p>
+<h1 id="�����l����е��l�"><a href="#�����l����е��l�" class="headerlink" title="�����ļ����е��ļ�"></a>�����ļ����е��ļ�</h1><p>Set fso = CreateObject(“Scripting.FileSystemObject”)<br>Set fpFolder = fso.GetFolder(��)<br>Set fpFile = fpFolder.Files<br>For Each file In fpFile<br>����<br>Next<br>Set fso = Nothing</p>
+<h1 id="��д�l�"><a href="#��д�l�" class="headerlink" title="��д�ļ�"></a>��д�ļ�</h1><p>Set fso = CreateObject(“Scripting.FileSystemObject”)<br>Set fpr = fso.OpenTextFile(filename, 1, False)        ‘1ֻ����2ֻд��8���ļ�����ĩβ��    ‘��д������true��ʾfilename������ʱ ‘���������ļ�������Ϊfalse<br>Do While Not fpr.AtEndOfStream<br>    str = fpr.ReadLine<br>    ����<br>Loop<br>fpr.close<br>Set fpw = fso.OpenTextFile(filename, 2, True)<br>fpw.WriteLine(��)<br>fpw.close<br>Set fso = Nothing</p>
+<h1 id="�ֵ��ʹ��"><a href="#�ֵ��ʹ��" class="headerlink" title="�ֵ��ʹ��"></a>�ֵ��ʹ��</h1><p>Set Dict = CreateObject(“Scripting.Dictionary”)<br>If Not Dict.Exists(key) Then<br>    Dict.Add key, value<br>    Dict.Add key                        ‘ֻ����key��������value<br>End If<br>�� = Dict.Item(key)                ‘key��Ӧ��valueֵ<br>keys = transDict.Keys            ‘�ֵ������е�key<br>����<br>Dict.RemoveAll<br>Set Dict = Nothing</p>
+<h1 id="split����"><a href="#split����" class="headerlink" title="split����"></a>split����</h1><p>�� = Split(str,���ָ����)</p>
+<h1 id="UBound����"><a href="#UBound����" class="headerlink" title="UBound����"></a>UBound����</h1><p>UBound�����ɷ���ָʾ����ά��������±ꡣ��LBound �����ɷ���ָʾ����ά������С�±ꡣ��<br>UBound(arrayname[,dimension])<br>arrayname����ġ�������������ơ�<br>imension��ѡ�ġ�Ҫ������һά���Ͻ硣1 = ��һά��2 = �ڶ�ά���Դ����ơ�Ĭ����1��<br>����<br>dim a(10)<br>a(0)=”Saturday”<br>a(1)=”Sunday”<br>a(2)=”Monday”<br>a(3)=”Tuesday”<br>a(4)=”Wednesday”<br>a(5)=”Thursday”<br>UBound(a)        ‘10<br>LBound(a)        ‘0</p>
+<h1 id="�ж��l��Ƿ����"><a href="#�ж��l��Ƿ����" class="headerlink" title="�ж��ļ��Ƿ����"></a>�ж��ļ��Ƿ����</h1><p>Function IsFileExists(fn)<br>    Dim fso<br>    Set fso = CreateObject(“Scripting.FileSystemObject”)<br>    IsFileExists = fso.FileExists(fn)<br>    Set fso = Nothing<br>End Function</p>
+<h1 id="�����l���"><a href="#�����l���" class="headerlink" title="�����ļ���"></a>�����ļ���</h1><p>If Not fso.FolderExists(��) Then<br>    fso.CreateFolder (��)<br>End If</p>
+<h1 id="Round����"><a href="#Round����" class="headerlink" title="Round����"></a>Round����</h1><p>Round �����ɶ����ֽ����������롣<br>Round(expression[,numdecimalplaces])<br>expression������ġ���Ҫ����������ı��ʽ��<br>numdecimalplaces����ѡ�ġ��涨��С�����ұߵĶ���λ�����������롣Ĭ����0��</p>
+<h1 id="CDbl��CLng��CStr"><a href="#CDbl��CLng��CStr" class="headerlink" title="CDbl��CLng��CStr"></a>CDbl��CLng��CStr</h1><p>CDbl(expression)<br>CLng(expression)<br>CStr(expression)<br>CDbl �����ɰѱ��ʽת��Ϊ˫���ȣ�Double�����͡�<br>CLng �����ɰѱ��ʽת��Ϊ�����Σ�Long�����͡�<br>CStr �����ɰѱ��ʽת��Ϊ�ַ�����String�����͡�</p>
+<h1 id="redim"><a href="#redim" class="headerlink" title="redim"></a>redim</h1><p>ReDim [Preserve] varname(subscripts) [, varname(subscripts)] . . .<br>Preserve�������������������һά�Ĵ�Сʱ�������ݡ�<br>varname������������ѭ��׼��������Լ����<br>subscripts�����������ά�������������� 60 ά���顣subscripts �����﷨��ʽ���£�<br>upper [,upper] . . .<br>������½������㡣<br>ReDim���ͨ������ָ�����޸Ķ�̬����Ĵ�С����Щ�������ô��п����ŵ� Dim��䣨û��ά���±꣩��ʽ�������������ظ�ʹ�� ReDim ����������ά����Ԫ����Ŀ�����ʹ���� Preserve �ؼ��֣���ֻ�ܵ����������ά�Ĵ�С�����Ҳ��ܸı������ά�������磬�������ֻ��һά���Ϳ����޸ĸ�����Ĵ�С����Ϊ��ά������Ҳ�ǽ��е�һά�����ǣ�������������������ά����ֻ�ܸı�ĩά�Ĵ�С�������������ݡ�</p>
+<h1 id="isnumeric"><a href="#isnumeric" class="headerlink" title="isnumeric"></a>isnumeric</h1><p>IsNumeric(expression)<br>IsNumeric �����ɷ���ָʾָ���ı��ʽ�Ƿ����Ϊ����������Ĳ���ֵ�������Ϊ���������㣬�򷵻� True �����򷵻� False��</p>
+<h1 id="�ַ���ת����"><a href="#�ַ���ת����" class="headerlink" title="�ַ���ת����"></a>�ַ���ת����</h1><p>Function Str2Dt(val)<br>  If Len(val) = 8 Then<br>    On Error Resume Next<br>    Str2Dt = DateSerial(Left(val, 4), Mid(val, 5, 2), Right(val, 2))<br>    If Err.Number &lt;&gt; 0 Then<br>      Str2Dt = Date<br>    End If<br>  Else<br>    Str2Dt = Date<br>  End If<br>End Function</p>
+<h1 id="����ת�ַ���"><a href="#����ת�ַ���" class="headerlink" title="����ת�ַ���"></a>����ת�ַ���</h1><p>Function Two(val)<br>  Two = Fix(val/10) &amp; (val - Fix(val/10)*10)<br>End Function</p>
+<p>Function Dt2Str(val)<br>  Dt2Str = Year(val) &amp; Two(Month(val)) &amp; Two(Day(val))<br>End Function</p>
+<h1 id="�����Ƿ�Ϸ�"><a href="#�����Ƿ�Ϸ�" class="headerlink" title="�����Ƿ�Ϸ�"></a>�����Ƿ�Ϸ�</h1><p>Function IsValidDt(val)<br>  IsValidDt = (Dt2Str(Str2Dt(val)) = val)<br>End Function</p>
+<h1 id="��ѹ�l�"><a href="#��ѹ�l�" class="headerlink" title="��ѹ�ļ�"></a>��ѹ�ļ�</h1><p>function unRar(fn, targetDir)<br>    unRar = false</p>
+<pre><code>Dim fso, WshShell, res
+Set fso = CreateObject(&quot;Scripting.FileSystemObject&quot;)
+Set WshShell = WScript.CreateObject(&quot;WScript.Shell&quot;)
+
+if not isFileExists(fn) then
+    MsgBox &quot;����ѹ�ļ������ڣ�&quot;, vbOKOnly, &quot;��ʾ&quot;
+    exit function
+end if
+
+res = WshShell.Run(&quot;WinRAR.exe e &quot;&amp; fn &amp; &quot; &quot; &amp; targetDir, 0, True)
+
+If not res=0 Then
+MsgBox &quot;��ѹʧ�ܣ�Error:&quot; &amp; res, vbOKOnly, &quot;��ʾ&quot;
+    exit function
+</code></pre><p>  End If</p>
+<pre><code>unRar = true
+</code></pre><p>end function</p>
+<h1 id="sub��һ�����̣�u�з���ֵ�������в�����function��һ���������з���ֵ�������в�����"><a href="#sub��һ�����̣�u�з���ֵ�������в�����function��һ���������з���ֵ�������в�����" class="headerlink" title="sub��һ�����̣�û�з���ֵ�������в�����function��һ���������з���ֵ�������в�����"></a>sub��һ�����̣�û�з���ֵ�������в�����function��һ���������з���ֵ�������в�����</h1><p>function AA()<br>    ����<br>    AA = true<br>end function</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/VBScript/" rel="tag"># VBScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/10/hello-world/" rel="next" title="Hello World！">
+                <i class="fa fa-chevron-left"></i> Hello World！
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="Wang Jie" />
+            
+              <p class="site-author-name" itemprop="name">Wang Jie</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/RadiationJIE" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:826922042@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#option-explicit"><span class="nav-number">1.</span> <span class="nav-text">option explicit</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#����L¼"><span class="nav-number">2.</span> <span class="nav-text">����Ŀ¼</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#��-�ر�excel"><span class="nav-number">3.</span> <span class="nav-text">��/�ر�excel</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DateDiff����"><span class="nav-number">4.</span> <span class="nav-text">DateDiff����</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#forѭ��"><span class="nav-number">5.</span> <span class="nav-text">forѭ��</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#�����"><span class="nav-number">6.</span> <span class="nav-text">�����</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#�����l�"><span class="nav-number">7.</span> <span class="nav-text">�����ļ�</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#�����l����е��l�"><span class="nav-number">8.</span> <span class="nav-text">�����ļ����е��ļ�</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#��д�l�"><span class="nav-number">9.</span> <span class="nav-text">��д�ļ�</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#�ֵ��ʹ��"><span class="nav-number">10.</span> <span class="nav-text">�ֵ��ʹ��</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#split����"><span class="nav-number">11.</span> <span class="nav-text">split����</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#UBound����"><span class="nav-number">12.</span> <span class="nav-text">UBound����</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#�ж��l��Ƿ����"><span class="nav-number">13.</span> <span class="nav-text">�ж��ļ��Ƿ����</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#�����l���"><span class="nav-number">14.</span> <span class="nav-text">�����ļ���</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Round����"><span class="nav-number">15.</span> <span class="nav-text">Round����</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CDbl��CLng��CStr"><span class="nav-number">16.</span> <span class="nav-text">CDbl��CLng��CStr</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#redim"><span class="nav-number">17.</span> <span class="nav-text">redim</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#isnumeric"><span class="nav-number">18.</span> <span class="nav-text">isnumeric</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#�ַ���ת����"><span class="nav-number">19.</span> <span class="nav-text">�ַ���ת����</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#����ת�ַ���"><span class="nav-number">20.</span> <span class="nav-text">����ת�ַ���</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#�����Ƿ�Ϸ�"><span class="nav-number">21.</span> <span class="nav-text">�����Ƿ�Ϸ�</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#��ѹ�l�"><span class="nav-number">22.</span> <span class="nav-text">��ѹ�ļ�</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sub��һ�����̣�u�з���ֵ�������в�����function��һ���������з���ֵ�������в�����"><span class="nav-number">23.</span> <span class="nav-text">sub��һ�����̣�û�з���ֵ�������в�����function��һ���������з���ֵ�������в�����</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wang Jie</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

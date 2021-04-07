@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon-16x16-next.png?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="VBScript,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="刚进公司的时候，经常用VBScript编写一些脚本处理文件。虽然这个脚本语言现在已经不流行了，但是在windows操作系统上处理文件还是挺实用的。所以，最近将它整理了一下。 option explicit　　强制要求显式声明脚本中的所有变量，如果试图使用未经声明的变量名，则会出现错误。如果使用option explicit，该语句必须出现在脚本的任何其他语句之前。 定义目录1234567Dim">
+<meta name="keywords" content="VBScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VBScript总结">
+<meta property="og:url" content="http://yoursite.com/2018/05/24/VBScript/index.html">
+<meta property="og:site_name" content="RadiationJIE">
+<meta property="og:description" content="刚进公司的时候，经常用VBScript编写一些脚本处理文件。虽然这个脚本语言现在已经不流行了，但是在windows操作系统上处理文件还是挺实用的。所以，最近将它整理了一下。 option explicit　　强制要求显式声明脚本中的所有变量，如果试图使用未经声明的变量名，则会出现错误。如果使用option explicit，该语句必须出现在脚本的任何其他语句之前。 定义目录1234567Dim">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-05-24T11:28:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VBScript总结">
+<meta name="twitter:description" content="刚进公司的时候，经常用VBScript编写一些脚本处理文件。虽然这个脚本语言现在已经不流行了，但是在windows操作系统上处理文件还是挺实用的。所以，最近将它整理了一下。 option explicit　　强制要求显式声明脚本中的所有变量，如果试图使用未经声明的变量名，则会出现错误。如果使用option explicit，该语句必须出现在脚本的任何其他语句之前。 定义目录1234567Dim">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/05/24/VBScript/">
+
+
+
+
+
+  <title>VBScript总结 | RadiationJIE</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">RadiationJIE</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/VBScript/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wang Jie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RadiationJIE">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">VBScript总结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T19:28:14+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>　　刚进公司的时候，经常用VBScript编写一些脚本处理文件。虽然这个脚本语言现在已经不流行了，但是在windows操作系统上处理文件还是挺实用的。所以，最近将它整理了一下。</p>
+<h1 id="option-explicit"><a href="#option-explicit" class="headerlink" title="option explicit"></a>option explicit</h1><p>　　强制要求显式声明脚本中的所有变量，如果试图使用未经声明的变量名，则会出现错误。如果使用<code>option explicit</code>，该语句必须出现在脚本的任何其他语句之前。</p>
+<h1 id="定义目录"><a href="#定义目录" class="headerlink" title="定义目录"></a>定义目录</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Dim WshShell, WORKINGPATH, RESULTPATH, CONFIGPATH</span><br><span class="line">Set WshShell = WScript.CreateObject(&quot;WScript.Shell&quot;)</span><br><span class="line">&apos;双击.vbs脚本得到的WshShell.CurrentDirectory路径是当前脚本的路径；</span><br><span class="line">&apos;若选择打开方式Microsoft Windows Based Script Host，则不是当前脚本的路径。</span><br><span class="line">WORKINGPATH = WshShell.CurrentDirectory &amp; &quot;\data\... &quot;</span><br><span class="line">RESULTPATH = WshShell.CurrentDirectory &amp; &quot;\result\...&quot;</span><br><span class="line">CONFIGPATH = WshShell.CurrentDirectory &amp; &quot;\config\...&quot;</span><br></pre></td></tr></table></figure>
+<h1 id="打开-关闭excel"><a href="#打开-关闭excel" class="headerlink" title="打开/关闭excel"></a>打开/关闭excel</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Dim xlApp, xlBook, xlSheet</span><br><span class="line">Set xlApp = CreateObject(&quot;Excel.Application&quot;)</span><br><span class="line">xlApp.Visible = True        &apos;生成报表过程中显示报表</span><br><span class="line">Set xlBook = xlApp.WorkBooks.Open(WORKINGPATH)</span><br><span class="line">Set xlSheet = xlBook.Sheets(&quot;…&quot;)        &apos;Sheet名称</span><br><span class="line">Set xlSheet = xlBook.Sheets(1)        &apos;第一个Sheet</span><br><span class="line">……</span><br><span class="line">xlSheet.cells(1, &quot;A&quot;) = …</span><br><span class="line">&apos;xlSheet.cells(1, 1) = …        &apos;可以用列号也可以用列序号</span><br><span class="line">……</span><br><span class="line">&apos;给某一区域的单元格增加边框，变量row表示行</span><br><span class="line">xlSheet.Range(&quot;A3:K&quot; &amp; row).Borders(1).LineStyle = 1</span><br><span class="line">xlSheet.Range(&quot;A3:K&quot; &amp; row).Borders(2).LineStyle = 1</span><br><span class="line">xlSheet.Range(&quot;A3:K&quot; &amp; row).Borders(3).LineStyle = 1</span><br><span class="line">xlSheet.Range(&quot;A3:K&quot; &amp; row).Borders(4).LineStyle = 1</span><br><span class="line">……	</span><br><span class="line">&apos;xlBook.SaveAs (RESULTPATH)        &apos;另存为excel文件</span><br><span class="line">xlApp.Workbooks.Close</span><br><span class="line">xlApp.Quit</span><br><span class="line">Set xlBook = Nothing</span><br><span class="line">Set xlApp = Nothing</span><br></pre></td></tr></table></figure>
+<h1 id="DateDiff函数"><a href="#DateDiff函数" class="headerlink" title="DateDiff函数"></a>DateDiff函数</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DateDiff(“d” ,date1,date2)</span><br></pre></td></tr></table></figure>
+<p>　　<code>DateDiff</code>函数可返回两个日期之间的时间间隔数。用于计算两日期时间的差值，计算方法是 date2 - date1。<br>　　若比较年份，则不管月份以下的数值，若比较月份，则不管天数以下的数值…… 以此类推。</p>
+<h1 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for i = 0 to j</span><br><span class="line">  ……</span><br><span class="line">Next</span><br></pre></td></tr></table></figure>
+<h1 id="输入框"><a href="#输入框" class="headerlink" title="输入框"></a>输入框</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">… = InputBox(&quot;弹框内容&quot;,&quot;弹框标题&quot;)</span><br></pre></td></tr></table></figure>
+<h1 id="拷贝文件"><a href="#拷贝文件" class="headerlink" title="拷贝文件"></a>拷贝文件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Set fso = CreateObject(&quot;Scripting.FileSystemObject&quot;)</span><br><span class="line">fso.CopyFile 路径A\*.doc, 路径B\, false</span><br><span class="line">Set fso = Nothing</span><br></pre></td></tr></table></figure>
+<p>　　只能在路径A后（路径最后一个组成部分）使用通配符*。<code>false</code>表示不覆盖现有文件，<code>true</code>表示覆盖文件，但无论是false还是true，若路径B为只读属性，<code>CopyFile</code>操作无法完成。</p>
+<h1 id="遍历文件夹中的文件"><a href="#遍历文件夹中的文件" class="headerlink" title="遍历文件夹中的文件"></a>遍历文件夹中的文件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Set fso = CreateObject(&quot;Scripting.FileSystemObject&quot;)</span><br><span class="line">Set fpFolder = fso.GetFolder(…)</span><br><span class="line">Set fpFile = fpFolder.Files</span><br><span class="line">For Each file In fpFile</span><br><span class="line">  ……</span><br><span class="line">Next</span><br><span class="line">Set fso = Nothing</span><br></pre></td></tr></table></figure>
+<h1 id="读写文件"><a href="#读写文件" class="headerlink" title="读写文件"></a>读写文件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Set fso = CreateObject(&quot;Scripting.FileSystemObject&quot;)</span><br><span class="line">Set fpr = fso.OpenTextFile(filename, 1, False)        </span><br><span class="line">&apos;1只读，2只写，8打开文件并在末尾进行写操作；</span><br><span class="line">&apos;true表示filename不存在时允许创建新文件，否则为false</span><br><span class="line">Do While Not fpr.AtEndOfStream</span><br><span class="line">  str = fpr.ReadLine</span><br><span class="line">  ……</span><br><span class="line">Loop</span><br><span class="line">fpr.close</span><br><span class="line">Set fpw = fso.OpenTextFile(filename, 2, True)</span><br><span class="line">fpw.WriteLine(…)</span><br><span class="line">fpw.close</span><br><span class="line">Set fso = Nothing</span><br></pre></td></tr></table></figure>
+<h1 id="字典的使用"><a href="#字典的使用" class="headerlink" title="字典的使用"></a>字典的使用</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Set Dict = CreateObject(&quot;Scripting.Dictionary&quot;)</span><br><span class="line">If Not Dict.Exists(key) Then </span><br><span class="line">  Dict.Add key, value</span><br><span class="line">  Dict.Add key        &apos;只增加key，不增加value</span><br><span class="line">End If</span><br><span class="line">… = Dict.Item(key)        &apos;key对应的value值</span><br><span class="line">keys = transDict.Keys        &apos;字典中所有的key</span><br><span class="line">……</span><br><span class="line">Dict.RemoveAll</span><br><span class="line">Set Dict = Nothing</span><br></pre></td></tr></table></figure>
+<h1 id="split函数"><a href="#split函数" class="headerlink" title="split函数"></a>split函数</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">… = Split(str,”分隔符”)</span><br></pre></td></tr></table></figure>
+<h1 id="UBound函数"><a href="#UBound函数" class="headerlink" title="UBound函数"></a>UBound函数</h1><p><code>UBound</code>函数可返回指示数组维数的最大下标。（<code>LBound</code> 函数可返回指示数组维数的最小下标。）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UBound(arrayname[,dimension])</span><br></pre></td></tr></table></figure>
+<p>　　arrayname必需的。数组变量的名称。<br>　　imension可选的。要返回哪一维的上界。1 = 第一维，2 = 第二维，以此类推。默认是1。<br>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dim a(10)</span><br><span class="line">a(0)=&quot;Saturday&quot;</span><br><span class="line">a(1)=&quot;Sunday&quot;</span><br><span class="line">a(2)=&quot;Monday&quot;</span><br><span class="line">a(3)=&quot;Tuesday&quot;</span><br><span class="line">a(4)=&quot;Wednesday&quot;</span><br><span class="line">a(5)=&quot;Thursday&quot;</span><br><span class="line">UBound(a)        &apos;10</span><br><span class="line">LBound(a)        &apos;0</span><br></pre></td></tr></table></figure>
+<h1 id="判断文件是否存在"><a href="#判断文件是否存在" class="headerlink" title="判断文件是否存在"></a>判断文件是否存在</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Function IsFileExists(fn)</span><br><span class="line">  Dim fso</span><br><span class="line">  Set fso = CreateObject(&quot;Scripting.FileSystemObject&quot;)</span><br><span class="line">  IsFileExists = fso.FileExists(fn)</span><br><span class="line">  Set fso = Nothing</span><br><span class="line">End Function</span><br></pre></td></tr></table></figure>
+<h1 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">If Not fso.FolderExists(…) Then</span><br><span class="line">  fso.CreateFolder (…)</span><br><span class="line">End If</span><br></pre></td></tr></table></figure>
+<h1 id="Round函数"><a href="#Round函数" class="headerlink" title="Round函数"></a>Round函数</h1><p><code>Round</code>函数可对数字进行四舍五入。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Round(expression[,numdecimalplaces])</span><br></pre></td></tr></table></figure>
+<p>　　expression：必需的。需要被四舍五入的表达式。<br>　　numdecimalplaces：可选的。规定对小数点右边的多少位进行四舍五入。默认是0。</p>
+<h1 id="CDbl、CLng、CStr函数"><a href="#CDbl、CLng、CStr函数" class="headerlink" title="CDbl、CLng、CStr函数"></a>CDbl、CLng、CStr函数</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CDbl(expression)</span><br><span class="line">CLng(expression)</span><br><span class="line">CStr(expression)</span><br></pre></td></tr></table></figure>
+<p><code>CDbl</code>函数可把表达式转换为双精度（Double）类型。<br><code>CLng</code>函数可把表达式转换为长整形（Long）类型。<br><code>CStr</code>函数可把表达式转换为字符串（String）类型。</p>
+<h1 id="redim"><a href="#redim" class="headerlink" title="redim"></a>redim</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ReDim [Preserve] varname(subscripts) [, varname(subscripts)]...</span><br></pre></td></tr></table></figure>
+<p>　　Preserve：当更改现有数组最后一维的大小时保留数据。<br>　　varname：变量名，遵循标准变量命名约定。<br>　　subscripts：数组变量的维数，最多可以声明 60 维数组。subscripts 参数语法格式如下：<br>　　upper [,upper] . . .<br>　　数组的下界总是零。<br>　　<code>ReDim</code>语句通常用于指定或修改动态数组的大小，这些数组已用带有空括号的<code>Dim</code>语句（没有维数下标）正式声明过。可以重复使用 <code>ReDim</code>语句更改数组维数和元素数目。如果使用了<code>Preserve</code>关键字，就只能调整数组最后维的大小，并且不能改变数组的维数。例如，如果数组只有一维，就可以修改该数组的大小，因为该维是最后的也是仅有的一维。但是，如果数组有两个或更多维，就只能改变末维的大小并保留数组内容。</p>
+<h1 id="isnumeric"><a href="#isnumeric" class="headerlink" title="isnumeric"></a>isnumeric</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IsNumeric(expression)</span><br></pre></td></tr></table></figure>
+<p><code>IsNumeric</code>函数可返回指示指定的表达式是否可作为数字来计算的布尔值。如果作为数字来计算，则返回<code>True</code>，否则返回<code>False</code>。</p>
+<h1 id="字符串转日期"><a href="#字符串转日期" class="headerlink" title="字符串转日期"></a>字符串转日期</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Function Str2Dt(val)</span><br><span class="line">  If Len(val) = 8 Then</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Str2Dt = DateSerial(Left(val, 4), Mid(val, 5, 2), Right(val, 2))</span><br><span class="line">    If Err.Number &lt;&gt; 0 Then</span><br><span class="line">      Str2Dt = Date</span><br><span class="line">    End If</span><br><span class="line">  Else</span><br><span class="line">    Str2Dt = Date</span><br><span class="line">  End If</span><br><span class="line">End Function</span><br></pre></td></tr></table></figure>
+<h1 id="日期转字符串"><a href="#日期转字符串" class="headerlink" title="日期转字符串"></a>日期转字符串</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Function Two(val)</span><br><span class="line">  Two = Fix(val/10) &amp; (val - Fix(val/10)*10)</span><br><span class="line">End Function</span><br><span class="line"></span><br><span class="line">Function Dt2Str(val)</span><br><span class="line">  Dt2Str = Year(val) &amp; Two(Month(val)) &amp; Two(Day(val))</span><br><span class="line">End Function</span><br></pre></td></tr></table></figure>
+<h1 id="判断日期是否合法"><a href="#判断日期是否合法" class="headerlink" title="判断日期是否合法"></a>判断日期是否合法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Function IsValidDt(val)</span><br><span class="line">  IsValidDt = (Dt2Str(Str2Dt(val)) = val)  </span><br><span class="line">End Function</span><br></pre></td></tr></table></figure>
+<h1 id="解压文件"><a href="#解压文件" class="headerlink" title="解压文件"></a>解压文件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">function unRar(fn, targetDir)</span><br><span class="line">  unRar = false</span><br><span class="line">	</span><br><span class="line">  Dim fso, WshShell, res</span><br><span class="line">  Set fso = CreateObject(&quot;Scripting.FileSystemObject&quot;)</span><br><span class="line">  Set WshShell = WScript.CreateObject(&quot;WScript.Shell&quot;)</span><br><span class="line">	</span><br><span class="line">  if not isFileExists(fn) then</span><br><span class="line">    MsgBox &quot;待解压文件不存在！&quot;, vbOKOnly, &quot;提示&quot;</span><br><span class="line">    exit function</span><br><span class="line">  end if</span><br><span class="line">	</span><br><span class="line">  res = WshShell.Run(&quot;WinRAR.exe e &quot;&amp; fn &amp; &quot; &quot; &amp; targetDir, 0, True)</span><br><span class="line">	</span><br><span class="line">  If not res=0 Then</span><br><span class="line">    MsgBox &quot;解压失败！Error:&quot; &amp; res, vbOKOnly, &quot;提示&quot;</span><br><span class="line">    exit function</span><br><span class="line">  End If</span><br><span class="line">	</span><br><span class="line">  unRar = true</span><br><span class="line">end function</span><br></pre></td></tr></table></figure>
+<h1 id="sub和function"><a href="#sub和function" class="headerlink" title="sub和function"></a>sub和function</h1><p>　　sub是一个过程，没有返回值，可以有参数；function是一个函数，有返回值，可以有参数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function AA()</span><br><span class="line">  ……</span><br><span class="line">  AA = true</span><br><span class="line">end function</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/VBScript/" rel="tag"># VBScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/10/hello-world/" rel="next" title="Hello World！">
+                <i class="fa fa-chevron-left"></i> Hello World！
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/04/07/test/" rel="prev" title="Test！">
+                Test！ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Wang Jie">
+            
+              <p class="site-author-name" itemprop="name">Wang Jie</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/RadiationJIE" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:826922042@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#option-explicit"><span class="nav-number">1.</span> <span class="nav-text">option explicit</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#定义目录"><span class="nav-number">2.</span> <span class="nav-text">定义目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#打开-关闭excel"><span class="nav-number">3.</span> <span class="nav-text">打开/关闭excel</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DateDiff函数"><span class="nav-number">4.</span> <span class="nav-text">DateDiff函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#for循环"><span class="nav-number">5.</span> <span class="nav-text">for循环</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#输入框"><span class="nav-number">6.</span> <span class="nav-text">输入框</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#拷贝文件"><span class="nav-number">7.</span> <span class="nav-text">拷贝文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#遍历文件夹中的文件"><span class="nav-number">8.</span> <span class="nav-text">遍历文件夹中的文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#读写文件"><span class="nav-number">9.</span> <span class="nav-text">读写文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字典的使用"><span class="nav-number">10.</span> <span class="nav-text">字典的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#split函数"><span class="nav-number">11.</span> <span class="nav-text">split函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#UBound函数"><span class="nav-number">12.</span> <span class="nav-text">UBound函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#判断文件是否存在"><span class="nav-number">13.</span> <span class="nav-text">判断文件是否存在</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建文件夹"><span class="nav-number">14.</span> <span class="nav-text">创建文件夹</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Round函数"><span class="nav-number">15.</span> <span class="nav-text">Round函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CDbl、CLng、CStr函数"><span class="nav-number">16.</span> <span class="nav-text">CDbl、CLng、CStr函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#redim"><span class="nav-number">17.</span> <span class="nav-text">redim</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#isnumeric"><span class="nav-number">18.</span> <span class="nav-text">isnumeric</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串转日期"><span class="nav-number">19.</span> <span class="nav-text">字符串转日期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#日期转字符串"><span class="nav-number">20.</span> <span class="nav-text">日期转字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#判断日期是否合法"><span class="nav-number">21.</span> <span class="nav-text">判断日期是否合法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解压文件"><span class="nav-number">22.</span> <span class="nav-text">解压文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sub和function"><span class="nav-number">23.</span> <span class="nav-text">sub和function</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wang Jie</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

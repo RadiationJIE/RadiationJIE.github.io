@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="TPS,">
+  <meta name="keywords" content="分布式,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="工作中经常能遇到TPS和QPS两个性能指标，于是今天花时间上网查了资料，把相关概念整理一下。 TPS　　TPS（Transactions Per Second），每秒处理事务数。一个事务是指一个客户机向服务器发送请求然后服务器做出反应的过程。　　1）用户请求服务器；2）服务器自己的内部查询等处理；3）服务器应答用户。假设每秒能够完成N个上述三个过程，则TPS为N。 QPS　　QPS（Queri">
-<meta name="keywords" content="TPS">
+<meta name="description" content="4月24日，周六，阴转小雨，三教，政治课。老师拿起名单开始点名，后排同学来了一句：突然就不困了。上午起不来，英语课结束才来签到。中午边喝咖啡，边和巍哥聊人生。不知道未来何去何从，两个迷茫的人相互安慰，报团取暖。但无论如何，还是得学习，于是整理一下分布式相关的概念。 分布式　　分布式是一种工作方式。体现为将一个业务拆分成多个子业务，每个子业务分别部署在不同的服务器上，即，将不同的子业务分布在不同">
+<meta name="keywords" content="分布式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TPS与QPS">
-<meta property="og:url" content="http://yoursite.com/2021/04/22/TPS与QPS/index.html">
+<meta property="og:title" content="分布式相关概念理解">
+<meta property="og:url" content="http://yoursite.com/2021/04/22/分布式相关概念理解/index.html">
 <meta property="og:site_name" content="RadiationJIE">
-<meta property="og:description" content="工作中经常能遇到TPS和QPS两个性能指标，于是今天花时间上网查了资料，把相关概念整理一下。 TPS　　TPS（Transactions Per Second），每秒处理事务数。一个事务是指一个客户机向服务器发送请求然后服务器做出反应的过程。　　1）用户请求服务器；2）服务器自己的内部查询等处理；3）服务器应答用户。假设每秒能够完成N个上述三个过程，则TPS为N。 QPS　　QPS（Queri">
+<meta property="og:description" content="4月24日，周六，阴转小雨，三教，政治课。老师拿起名单开始点名，后排同学来了一句：突然就不困了。上午起不来，英语课结束才来签到。中午边喝咖啡，边和巍哥聊人生。不知道未来何去何从，两个迷茫的人相互安慰，报团取暖。但无论如何，还是得学习，于是整理一下分布式相关的概念。 分布式　　分布式是一种工作方式。体现为将一个业务拆分成多个子业务，每个子业务分别部署在不同的服务器上，即，将不同的子业务分布在不同">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-04-22T14:17:22.420Z">
+<meta property="og:updated_time" content="2021-04-24T05:41:56.365Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TPS与QPS">
-<meta name="twitter:description" content="工作中经常能遇到TPS和QPS两个性能指标，于是今天花时间上网查了资料，把相关概念整理一下。 TPS　　TPS（Transactions Per Second），每秒处理事务数。一个事务是指一个客户机向服务器发送请求然后服务器做出反应的过程。　　1）用户请求服务器；2）服务器自己的内部查询等处理；3）服务器应答用户。假设每秒能够完成N个上述三个过程，则TPS为N。 QPS　　QPS（Queri">
+<meta name="twitter:title" content="分布式相关概念理解">
+<meta name="twitter:description" content="4月24日，周六，阴转小雨，三教，政治课。老师拿起名单开始点名，后排同学来了一句：突然就不困了。上午起不来，英语课结束才来签到。中午边喝咖啡，边和巍哥聊人生。不知道未来何去何从，两个迷茫的人相互安慰，报团取暖。但无论如何，还是得学习，于是整理一下分布式相关的概念。 分布式　　分布式是一种工作方式。体现为将一个业务拆分成多个子业务，每个子业务分别部署在不同的服务器上，即，将不同的子业务分布在不同">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2021/04/22/TPS与QPS/">
+  <link rel="canonical" href="http://yoursite.com/2021/04/22/分布式相关概念理解/">
 
 
 
 
 
-  <title>TPS与QPS | RadiationJIE</title>
+  <title>分布式相关概念理解 | RadiationJIE</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/04/22/TPS与QPS/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/04/22/分布式相关概念理解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wang Jie">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">TPS与QPS</h1>
+          <h1 class="post-title" itemprop="name headline">分布式相关概念理解</h1>
         
 
         <div class="post-meta">
@@ -282,7 +282,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-04-22T22:16:45+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-04-22T22:20:12+08:00">
                 2021-04-22
               </time>
             
@@ -342,11 +342,13 @@
       
 
       
-        <p>　　工作中经常能遇到TPS和QPS两个性能指标，于是今天花时间上网查了资料，把相关概念整理一下。</p>
-<h1 id="TPS"><a href="#TPS" class="headerlink" title="TPS"></a>TPS</h1><p>　　TPS（Transactions Per Second），每秒处理事务数。一个事务是指一个客户机向服务器发送请求然后服务器做出反应的过程。<br>　　1）用户请求服务器；2）服务器自己的内部查询等处理；3）服务器应答用户。假设每秒能够完成N个上述三个过程，则TPS为N。</p>
-<h1 id="QPS"><a href="#QPS" class="headerlink" title="QPS"></a>QPS</h1><p>　　QPS（Queries Per Second），每秒查询率。是一台服务器每秒能够响应的查询次数，是对一个特定的查询服务器在规定时间内所处理流量多少的衡量标准。</p>
-<h1 id="区别与联系"><a href="#区别与联系" class="headerlink" title="区别与联系"></a>区别与联系</h1><p>　　QPS与TPS类似，不同的是，对于一个页面的一次访问，形成一个TPS；但这一次访问可能产生多次对服务器的请求，这些请求就可计入QPS中。<br>　　如果对一个接口进行压测，这个接口内部不会再去请求其他接口，那么QPS等于TPS；否则，QPS不等于TPS。</p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>　　<a href="https://zhuanlan.zhihu.com/p/82297970" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/82297970</a></p>
+        <p>　　4月24日，周六，阴转小雨，三教，政治课。老师拿起名单开始点名，后排同学来了一句：突然就不困了。上午起不来，英语课结束才来签到。中午边喝咖啡，边和巍哥聊人生。不知道未来何去何从，两个迷茫的人相互安慰，报团取暖。但无论如何，还是得学习，于是整理一下分布式相关的概念。</p>
+<h1 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h1><p>　　分布式是一种工作方式。体现为将一个业务拆分成多个子业务，每个子业务分别部署在不同的服务器上，即，将不同的子业务分布在不同的地方。</p>
+<h1 id="集群"><a href="#集群" class="headerlink" title="集群"></a>集群</h1><p>　　集群是一种物理形态。体现为将同一个业务部署在多个服务器上，即，将几台服务器集中在一起实现同一个业务。一般通过负载均衡（Nginx或F5）来控制具体调用哪一台服务器去完成任务。</p>
+<h1 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h1><p>　　微服务是一种架构风格。一个复杂的软件应用由多个微服务组成，每个微服务仅关注于完成一个任务（一个任务代表着一个小的业务能力）。微服务的设计是为了不因为某个模块的升级和bug影响现有的业务系统。</p>
+<h1 id="分布式与集群的区别与联系"><a href="#分布式与集群的区别与联系" class="headerlink" title="分布式与集群的区别与联系"></a>分布式与集群的区别与联系</h1><p>　　分布式中的每个节点（这里的节点我理解为子业务）都可以做成集群，而集群并不一定就是分布式的。分布式的每一个节点（这里的节点我理解为服务器）都完成不同的子业务，一个节点宕了，该子业务就不可访问了；而集群具有组织性，一台服务器宕了，其他服务器可以顶上来，保证业务不中断。<br>　　分布式以缩短单个任务的执行时间来提升效率，而集群则通过提高单位时间内执行的任务数来提升效率。<br>　　好的设计应该是分布式和集群的结合，先分布式再集群。具体实现就是将业务拆分成很多子业务，然后针对每个子业务进行集群部署，这样的好处是：如果某个子业务出现问题，整个系统完全不受影响（因为子业务进行集群部署后，一台服务器宕机，集群中其他服务器可以顶上来）。</p>
+<h1 id="分布式与微服务的区别与联系"><a href="#分布式与微服务的区别与联系" class="headerlink" title="分布式与微服务的区别与联系"></a>分布式与微服务的区别与联系</h1><p>　　分布式一定是微服务，微服务不一定是分布式。因为分布式的定义是把一个服务拆分成多个子服务，分别放在不同服务器上；而微服务可以放在同一个服务器上，也可以分散地放在不同的服务器上。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>　　<a href="https://www.cnblogs.com/lfjn/p/11393156.html" target="_blank" rel="noopener">https://www.cnblogs.com/lfjn/p/11393156.html</a></p>
 
       
     </div>
@@ -364,7 +366,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/TPS/" rel="tag"># TPS</a>
+            <a href="/tags/分布式/" rel="tag"># 分布式</a>
           
         </div>
       
@@ -377,8 +379,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2021/04/10/人生的意义在于感受生活/" rel="next" title="人生的意义在于感受生活">
-                <i class="fa fa-chevron-left"></i> 人生的意义在于感受生活
+              <a href="/2021/04/22/TPS与QPS/" rel="next" title="TPS与QPS">
+                <i class="fa fa-chevron-left"></i> TPS与QPS
               </a>
             
           </div>
@@ -386,10 +388,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2021/04/22/分布式相关概念理解/" rel="prev" title="分布式相关概念理解">
-                分布式相关概念理解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -539,7 +537,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TPS"><span class="nav-number">1.</span> <span class="nav-text">TPS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QPS"><span class="nav-number">2.</span> <span class="nav-text">QPS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#区别与联系"><span class="nav-number">3.</span> <span class="nav-text">区别与联系</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分布式"><span class="nav-number">1.</span> <span class="nav-text">分布式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集群"><span class="nav-number">2.</span> <span class="nav-text">集群</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#微服务"><span class="nav-number">3.</span> <span class="nav-text">微服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分布式与集群的区别与联系"><span class="nav-number">4.</span> <span class="nav-text">分布式与集群的区别与联系</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分布式与微服务的区别与联系"><span class="nav-number">5.</span> <span class="nav-text">分布式与微服务的区别与联系</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>

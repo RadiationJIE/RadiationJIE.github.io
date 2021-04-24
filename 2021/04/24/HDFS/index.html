@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="TPS,">
+  <meta name="keywords" content="大数据,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="工作中经常能遇到TPS和QPS两个性能指标，于是今天花时间上网查了资料，把相关概念整理一下。 TPS　　TPS（Transactions Per Second），每秒处理事务数。一个事务是指一个客户机向服务器发送请求然后服务器做出反应的过程。　　1）用户请求服务器；2）服务器自己的内部查询等处理；3）服务器应答用户。假设每秒能够完成N个上述三个过程，则TPS为N。 QPS　　QPS（Queri">
-<meta name="keywords" content="TPS">
+<meta name="description" content="HDFS（Hadoop Distributed File System），一种基于Java的分布式文件系统。了解它得先来看看几个重要概念。 重要概念分片　　对大文件进行切分是进行分布式存储的前提。HDFS中通常将数据切分成128MB的块。 副本　　各个数据块被切分存储在不同的服务器上，如何保证数据不丢失？可以使用冗余的存储方式，为每一个数据块都产生多个副本，将副本存储在不同的服务器上。这样的话">
+<meta name="keywords" content="大数据">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TPS与QPS">
-<meta property="og:url" content="http://yoursite.com/2021/04/22/TPS与QPS/index.html">
+<meta property="og:title" content="HDFS">
+<meta property="og:url" content="http://yoursite.com/2021/04/24/HDFS/index.html">
 <meta property="og:site_name" content="RadiationJIE">
-<meta property="og:description" content="工作中经常能遇到TPS和QPS两个性能指标，于是今天花时间上网查了资料，把相关概念整理一下。 TPS　　TPS（Transactions Per Second），每秒处理事务数。一个事务是指一个客户机向服务器发送请求然后服务器做出反应的过程。　　1）用户请求服务器；2）服务器自己的内部查询等处理；3）服务器应答用户。假设每秒能够完成N个上述三个过程，则TPS为N。 QPS　　QPS（Queri">
+<meta property="og:description" content="HDFS（Hadoop Distributed File System），一种基于Java的分布式文件系统。了解它得先来看看几个重要概念。 重要概念分片　　对大文件进行切分是进行分布式存储的前提。HDFS中通常将数据切分成128MB的块。 副本　　各个数据块被切分存储在不同的服务器上，如何保证数据不丢失？可以使用冗余的存储方式，为每一个数据块都产生多个副本，将副本存储在不同的服务器上。这样的话">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-04-22T14:17:22.420Z">
+<meta property="og:updated_time" content="2021-04-24T06:31:15.673Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TPS与QPS">
-<meta name="twitter:description" content="工作中经常能遇到TPS和QPS两个性能指标，于是今天花时间上网查了资料，把相关概念整理一下。 TPS　　TPS（Transactions Per Second），每秒处理事务数。一个事务是指一个客户机向服务器发送请求然后服务器做出反应的过程。　　1）用户请求服务器；2）服务器自己的内部查询等处理；3）服务器应答用户。假设每秒能够完成N个上述三个过程，则TPS为N。 QPS　　QPS（Queri">
+<meta name="twitter:title" content="HDFS">
+<meta name="twitter:description" content="HDFS（Hadoop Distributed File System），一种基于Java的分布式文件系统。了解它得先来看看几个重要概念。 重要概念分片　　对大文件进行切分是进行分布式存储的前提。HDFS中通常将数据切分成128MB的块。 副本　　各个数据块被切分存储在不同的服务器上，如何保证数据不丢失？可以使用冗余的存储方式，为每一个数据块都产生多个副本，将副本存储在不同的服务器上。这样的话">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2021/04/22/TPS与QPS/">
+  <link rel="canonical" href="http://yoursite.com/2021/04/24/HDFS/">
 
 
 
 
 
-  <title>TPS与QPS | RadiationJIE</title>
+  <title>HDFS | RadiationJIE</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/04/22/TPS与QPS/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/04/24/HDFS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wang Jie">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">TPS与QPS</h1>
+          <h1 class="post-title" itemprop="name headline">HDFS</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-04-22T22:16:45+08:00">
-                2021-04-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-04-24T14:30:40+08:00">
+                2021-04-24
               </time>
             
 
@@ -342,11 +342,14 @@
       
 
       
-        <p>　　工作中经常能遇到TPS和QPS两个性能指标，于是今天花时间上网查了资料，把相关概念整理一下。</p>
-<h1 id="TPS"><a href="#TPS" class="headerlink" title="TPS"></a>TPS</h1><p>　　TPS（Transactions Per Second），每秒处理事务数。一个事务是指一个客户机向服务器发送请求然后服务器做出反应的过程。<br>　　1）用户请求服务器；2）服务器自己的内部查询等处理；3）服务器应答用户。假设每秒能够完成N个上述三个过程，则TPS为N。</p>
-<h1 id="QPS"><a href="#QPS" class="headerlink" title="QPS"></a>QPS</h1><p>　　QPS（Queries Per Second），每秒查询率。是一台服务器每秒能够响应的查询次数，是对一个特定的查询服务器在规定时间内所处理流量多少的衡量标准。</p>
-<h1 id="区别与联系"><a href="#区别与联系" class="headerlink" title="区别与联系"></a>区别与联系</h1><p>　　QPS与TPS类似，不同的是，对于一个页面的一次访问，形成一个TPS；但这一次访问可能产生多次对服务器的请求，这些请求就可计入QPS中。<br>　　如果对一个接口进行压测，这个接口内部不会再去请求其他接口，那么QPS等于TPS；否则，QPS不等于TPS。</p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>　　<a href="https://zhuanlan.zhihu.com/p/82297970" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/82297970</a></p>
+        <p>　　HDFS（Hadoop Distributed File System），一种基于Java的分布式文件系统。了解它得先来看看几个重要概念。</p>
+<h1 id="重要概念"><a href="#重要概念" class="headerlink" title="重要概念"></a>重要概念</h1><h2 id="分片"><a href="#分片" class="headerlink" title="分片"></a>分片</h2><p>　　对大文件进行切分是进行分布式存储的前提。HDFS中通常将数据切分成128MB的块。</p>
+<h2 id="副本"><a href="#副本" class="headerlink" title="副本"></a>副本</h2><p>　　各个数据块被切分存储在不同的服务器上，如何保证数据不丢失？可以使用冗余的存储方式，为每一个数据块都产生多个副本，将副本存储在不同的服务器上。这样的话，某个服务器掉线，都不会造成数据丢失，因为还可以从其他服务器上拿到这个掉线服务器上的数据块副本。</p>
+<h1 id="主-从架构"><a href="#主-从架构" class="headerlink" title="主/从架构"></a>主/从架构</h1><p>　　除了负责存储的服务器，至少还需要一台服务器来做“管理”工作，否则没有人知道某个数据块到底存储在哪个服务器上。<br>　　在HDFS中，NameNode负责管理工作，DataNode负责存储具体的数据。NameNode上管理着元数据，即，记录着哪个数据块存储在哪台机器上；而DataNode会定时像NameNode汇报自己的工作状态，以便NameNode监控节点状态、是否故障等。</p>
+<h1 id="读取数据"><a href="#读取数据" class="headerlink" title="读取数据"></a>读取数据</h1><p>　　1、用户询问NameNode，NameNode提供数据的存储位置。由于数据有副本，一个数据在多个节点上存在，具体NameNode返回的是哪个节点遵循一定的原则（如就近原则）。<br>　　2、用户访问DataNode获取数据。</p>
+<h1 id="写入数据"><a href="#写入数据" class="headerlink" title="写入数据"></a>写入数据</h1><p>　　1、用户询问NameNode，NameNode提供数据的写入位置。<br>　　2、用户访问DataNode写入数据。副本的制造是在DataNode之间发生的，如：用户把数据写入节点1，节点1会把数据复制到节点2、节点3…</p>
+<h1 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h1><p>　　HDFS适合存储大文件，支持TB、PB级别的数据存储。因其有副本策略，故容错和恢复效果不错，可以构建在廉价的机器上。HDFS还支持流式数据访问，一次写入多次读取最为高效。（流式数据访问可理解为数据像流水一样一点点“流”过来，数据的处理和访问也支持一点一点的进行。全部收到数据后再处理，延迟会很大，而且很多场合会消耗大量内存。）<br>　　HDFS不适合大量小文件的存储；不适合并发写入；不支持随机修改文件、随机读文件。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>　　<a href="https://blog.csdn.net/kissknife/article/details/85611668?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-1&amp;spm=1001.2101.3001.4242" target="_blank" rel="noopener">https://blog.csdn.net/kissknife/article/details/85611668?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-1&amp;spm=1001.2101.3001.4242</a><br>　　<a href="https://www.qiwenshare.com/essay/detail/137" target="_blank" rel="noopener">https://www.qiwenshare.com/essay/detail/137</a><br>　　<a href="https://m.imooc.com/wenda/detail/589048" target="_blank" rel="noopener">https://m.imooc.com/wenda/detail/589048</a></p>
 
       
     </div>
@@ -364,7 +367,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/TPS/" rel="tag"># TPS</a>
+            <a href="/tags/大数据/" rel="tag"># 大数据</a>
           
         </div>
       
@@ -377,8 +380,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2021/04/10/人生的意义在于感受生活/" rel="next" title="人生的意义在于感受生活">
-                <i class="fa fa-chevron-left"></i> 人生的意义在于感受生活
+              <a href="/2021/04/22/分布式相关概念理解/" rel="next" title="分布式相关概念理解">
+                <i class="fa fa-chevron-left"></i> 分布式相关概念理解
               </a>
             
           </div>
@@ -386,10 +389,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2021/04/22/分布式相关概念理解/" rel="prev" title="分布式相关概念理解">
-                分布式相关概念理解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -539,7 +538,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TPS"><span class="nav-number">1.</span> <span class="nav-text">TPS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QPS"><span class="nav-number">2.</span> <span class="nav-text">QPS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#区别与联系"><span class="nav-number">3.</span> <span class="nav-text">区别与联系</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#重要概念"><span class="nav-number">1.</span> <span class="nav-text">重要概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分片"><span class="nav-number">1.1.</span> <span class="nav-text">分片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#副本"><span class="nav-number">1.2.</span> <span class="nav-text">副本</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主-从架构"><span class="nav-number">2.</span> <span class="nav-text">主/从架构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#读取数据"><span class="nav-number">3.</span> <span class="nav-text">读取数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写入数据"><span class="nav-number">4.</span> <span class="nav-text">写入数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#优缺点"><span class="nav-number">5.</span> <span class="nav-text">优缺点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">6.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
